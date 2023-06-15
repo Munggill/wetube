@@ -1,0 +1,19 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "the best way to watch a videos",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Munggill/wetube.git"
+  },
+  "keywords": [
+    "wetube-keywords"
+  ],
+  "author": "Munggill<wz2635@naver.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Munggill/wetube/issues"
+  },
+  "homepage": "https://github.com/Munggill/wetube#readme"
+}
