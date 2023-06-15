@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Munggill/wetube.git"
   },
+  "scripts": {
+    "win": "node index.js"
+  },
   "keywords": [
     "wetube-keywords"
   ],
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Munggill/wetube/issues"
   },
-  "homepage": "https://github.com/Munggill/wetube#readme"
+  "homepage": "https://github.com/Munggill/wetube#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
