@@ -30,7 +30,7 @@ const getHandleProtected = (req, res) =>{
     return res.send("Welcome to the private lounge.");
 }
 
-app.use(logger); 
+app.use(logger);  
 
 app.get("/", getHandelHome);
 app.get("/login",getLoginHandle);
