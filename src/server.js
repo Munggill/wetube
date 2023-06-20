@@ -13,11 +13,26 @@ const app = express();
  4. Status Code
  */
 
-const getHandelHome = (req, res) => {
-    return res.send({ message: "Hello NodeJs1"} );
+function logger (req, res, next) {
+    console.log(`${req.method} ${req.url}`);
+    //return res.send({ message: "MiddleWareTest ==> Last res.end(json)111"} ); 
+    next();
 }
 
-app.get("/", getHandelHome);
-app.get("/login", (req, res) => res.send("login Here"));
+const getHandelHome = (req, res) => {
+    return res.send({ message: "MiddleWareTest ==> Last res.end(json)222"} ); 
+}
 
+const getLoginHandle = (req, res) =>{
+    return res.send("<h1> Login Handle</h1>"); 
+}
+const getHandleProtected = (req, res) =>{
+    return res.send("Welcome to the private lounge.");
+}
+
+app.use(logger);  
+
+app.get("/", getHandelHome);
+app.get("/login",getLoginHandle);
+app.get("/protected",getHandleProtected);
 app.listen(PROT, () => console.log(`Server listenting on http://localhost:${PROT}`)); 
