@@ -1,6 +1,6 @@
 import express from "express";
  
-const PROT = 3999;
+const PORT = 3999;
 
 const app = express();
 
@@ -35,4 +35,4 @@ app.use(logger);
 app.get("/", getHandelHome);
 app.get("/login",getLoginHandle);
 app.get("/protected",getHandleProtected);
-app.listen(PROT, () => console.log(`Server listenting on http://localhost:${PROT}`)); 
+app.listen(PORT, () => console.log(`Server listenting on http://localhost:${PORT}`));    
