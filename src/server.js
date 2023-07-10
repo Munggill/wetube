@@ -11,7 +11,7 @@ app.use(logger("dev"));
 
 
 app.use("/", globalRouter);
-app.use("/users", userRouter); 
 app.use("/videos", videoRouter); 
+app.use("/users", userRouter); 
  
 app.listen(PORT, () => console.log(`Server listenting on http://localhost:${PORT}`));
