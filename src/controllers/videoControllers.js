@@ -3,12 +3,9 @@
 // pug 모듈로 render를 해준다.
 // =======================================================
 export const trending = (req, res) => res.render("home");
-export const see = (req, res) => { 
-    return res.send(`Watch Video ID ${req.params.id}`);
-}
-export const edit = (req, res) => { 
-    res.send("Edit");
-}
+export const see = (req, res) => res.render("watch");
+
+export const edit = (req, res) => res.render("edit");
 export const search =(req, res) => res.send("Search");
 export const upload =(req, res) => {
     console.log("TEST>");

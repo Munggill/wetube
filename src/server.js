@@ -28,6 +28,9 @@ console.log(`server가 실행되는 경로 :${process.cwd()}`);
 // 위 내용으로 인해 views 디렉토리(폴더)를 생성해야 한다.
 // ====================================================
 app.set("view engine","pug");
+// views의 실행 경로를 경로를 src/views로 변경한다.
+app.set("views", process.cwd() + "/src/views");
+
 app.use("/", globalRouter);
 app.use("/videos", videoRouter); 
 app.use("/users", userRouter); 
