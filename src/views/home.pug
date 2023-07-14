@@ -1,4 +1,16 @@
 extends base.pug
 
 block content  
-    h2 Welcome here you will see the trending videos
+    h2 Welcome here you will see the trending videos 
+
+    each video in videos 
+        div
+            h4=video.title
+            div 
+            ul
+                li #{video.rating}/5
+                li #{video.comments} comments.
+                li Posted #{video.createdAt} 
+                li #{video.views} views.
+    else 
+        div 동영상을 찾지 못했습니다.
