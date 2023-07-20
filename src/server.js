@@ -31,6 +31,11 @@ app.set("view engine","pug");
 // views의 실행 경로를 경로를 src/views로 변경한다.
 app.set("views", process.cwd() + "/src/views");
 
+// Express는 HTML의 Form 형식을 이해하지 못하기 때문에 해당 미들웨어를 사용하여
+// Form의 Values를 이해할 수 있도록 하고 우리가 쓸 수 있는 자바스크립트 형식(객체)로 전환해준다
+// req.body를 받을때 사용..
+app.use(express.urlencoded({exteded:true}));
+
 app.use("/", globalRouter);
 app.use("/videos", videoRouter); 
 app.use("/users", userRouter); 
