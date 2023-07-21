@@ -12,7 +12,11 @@ html(lang="ko")
             // 아래의 경우는 오직 pageTitle의 변수 값을 가지고 있는 Value다.
             // 결론만 말하면 스크립트를 열면 Text = 는 Value다
             h1=pageTitle
+            nav 
+                ul 
+                    li 
+                        a(href="/videos/upload") upload Video
         main
             block content
-            include partials/footer
-            //include partials/footer.pug 
+        include partials/footer
+        //include partials/footer.pug 
