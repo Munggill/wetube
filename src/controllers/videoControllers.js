@@ -43,7 +43,7 @@ export const getEdit = (req, res) => {
     const { id } = req.params; 
     const video = videos[id-1];
     return res.render("edit", {pageTitle : `Editing : ${video.title}`, video});
-}
+};
 export const postEdit = (req, res) => {   
     const { id } = req.params;
     //Form Action의 Value는 req.body로 받는다.
@@ -56,10 +56,19 @@ export const postEdit = (req, res) => {
 };
 
 export const getUpload = (req, res) => {
-    return res.render("upload");
+    return res.render("upload", {pageTitle : "Upload Video"});
 };
 
 export const postUpload = (req, res) => {
+    const newVideo ={ 
+        title : req.body.title,
+        rating : 0,
+        comments : 0,
+        createdAt : "jst now",
+        views : 0,
+        id : videos.length + 1 
+    }
+    videos.push(newVideo);
     // here we will add a video to the videos array.
     return res.redirect("/");
 };

@@ -11,7 +11,7 @@
   },
   "keywords": [
     "wetube-keywords"
-  ], 
+  ],
   "author": "Munggill<wz2635@naver.com>",
   "license": "MIT",
   "bugs": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Munggill/wetube#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^7.4.0",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
   },
