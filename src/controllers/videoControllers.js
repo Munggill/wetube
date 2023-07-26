@@ -1,16 +1,18 @@
 import Video from "../models/Video";
 
+// Video.find({},(error, videosDocument) => {});
 // =======================================================
 // server.js에서 pug 관련 설정을 해주었기 때문에 Express에서 
 // pug 모듈로 render를 해준다.
 // render는 view탬플릿과 탬플릿으로 보낼 변수의 인자를 같는다.
 // =======================================================
-export const home = (req, res) => {    
-    Video.find({},(error, videosDocument) => {
-        console.log("errors", error);
-        console.log("Document", videosDocument);
-    });
-    return res.render("home", {pageTitle : "Home", videos:[] });
+export const home =  async(req, res) => {     
+    try{
+        const videos = await Video.find({})
+        return res.render("home", {pageTitle : "Home", videos:[] }); 
+    } catch{
+        return res.render("server-error");
+    }    
 };
 export const watch = (req, res) => { 
     const { id } = req.params;  
