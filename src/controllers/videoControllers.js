@@ -1,4 +1,4 @@
-import Video from "../models/Video";
+import videoModel from "../models/Video";
 
 // Video.find({},(error, videosDocument) => {});
 // =======================================================
@@ -8,10 +8,11 @@ import Video from "../models/Video";
 // =======================================================
 export const home =  async(req, res) => {     
     try{
-        const videos = await Video.find({})
+        const videos = await videoModel.find({})
         return res.render("home", {pageTitle : "Home", videos:[] }); 
     } catch{
-        return res.render("server-error");
+        console.log(Error);
+        return res.render("server-error", {error : Error});
     }    
 };
 export const watch = (req, res) => { 
@@ -37,7 +38,17 @@ export const getUpload = (req, res) => {
 };
 
 export const postUpload = (req, res) => {
-
-    // here we will add a video to the videos array.
-    return res.redirect("/");
+    const { title, description, hashtags } = req.body;
+    const video = new videoModel({
+        title : title,
+        description : description ,
+        createAt : Date.now(),
+        hashtags : hashtags.split(",").map(word => `#${word}`),
+        meta:{
+            views:0,
+            rating:0
+        }
+    }); 
+    console.log(video);
+        return res.redirect("/");
 };
