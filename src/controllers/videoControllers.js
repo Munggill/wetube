@@ -43,19 +43,16 @@ export const postUpload = async (req, res) => {
     try {    
         const video = new videoModel({
             title : title,
-            description : description ,
-            // createdAt : Date.now(),
+            description : description , 
             hashtags : hashtags.split(",").map(word => `#${word}`),
-            meta:{
-                views:0,
-                rating:0
-            }
         }); 
         await video.save(); 
         return res.redirect("/");
     }
-    catch(error) {
-        console.log(`EERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!${error}`);
-        return res.render("upload", {pageTitle:"UploadVideo"});
+    catch(error) { 
+        return res.render("upload", {
+            pageTitle:"UploadVideo", 
+            errorMessage : error._message
+    });
     } 
 };
