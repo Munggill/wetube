@@ -9,7 +9,8 @@ import videoModel from "../models/Video";
 export const home =  async(req, res) => {     
     try{
         const videos = await videoModel.find({})
-        return res.render("home", {pageTitle : "Home", videos:[] }); 
+        console.log(videos);
+        return res.render("home", {pageTitle : "Home", videos:videos }); 
     } catch{
         console.log(Error);
         return res.render("server-error", {error : Error});
@@ -37,18 +38,21 @@ export const getUpload = (req, res) => {
     return res.render("upload", {pageTitle : "Upload Video"});
 };
 
-export const postUpload = (req, res) => {
+export const postUpload = async (req, res) => {
     const { title, description, hashtags } = req.body;
-    const video = new videoModel({
-        title : title,
-        description : description ,
-        createAt : Date.now(),
-        hashtags : hashtags.split(",").map(word => `#${word}`),
-        meta:{
-            views:0,
-            rating:0
-        }
-    }); 
-    console.log(video);
+    try {    
+        const video = new videoModel({
+            title : title,
+            description : description , 
+            hashtags : hashtags.split(",").map(word => `#${word}`),
+        }); 
+        await video.save(); 
         return res.redirect("/");
+    }
+    catch(error) { 
+        return res.render("upload", {
+            pageTitle:"UploadVideo", 
+            errorMessage : error._message
+    });
+    } 
 };
