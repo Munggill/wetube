@@ -5,7 +5,7 @@ import videoModel from "../models/Video";
 // server.js에서 pug 관련 설정을 해주었기 때문에 Express에서 
 // pug 모듈로 render를 해준다.
 // render는 view탬플릿과 탬플릿으로 보낼 변수의 인자를 같는다.
-// =======================================================
+// ===================================================== == 
 export const home =  async(req, res) => {     
     try{
         const videos = await videoModel.find({}) 

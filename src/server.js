@@ -35,7 +35,7 @@ app.set("views", process.cwd() + "/src/views");
 // req.body를 받을때 사용..
 app.use(express.urlencoded({exteded:true}));
 
-app.use("/", globalRouter);
+app.use("/", globalRouter);    
 app.use("/videos", videoRouter); 
 app.use("/users", userRouter); 
 

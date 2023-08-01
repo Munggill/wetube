@@ -4,11 +4,11 @@ const videoSchema = new mongoose.Schema({
     title:{
         type: String, 
         require : true, 
-        trim : true, 
+        trim : true,      
         minLength : 5, 
         maxLength : 80
     },
-    description:{
+    description:{ 
         type: String, 
         require : true, 
         trim : true, 
