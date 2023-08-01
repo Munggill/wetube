@@ -10,14 +10,20 @@ export const home =  async(req, res) => {
     try{
         const videos = await videoModel.find({}) 
         return res.render("home", {pageTitle : "Home", videos:videos }); 
-    } catch{
-        console.log(Error);
+    } catch{ 
         return res.render("server-error", {error : Error});
     }    
 };
-export const watch = (req, res) => { 
-    const { id } = req.params;  
-    return res.render("watch", {pageTitle : `Watching :` });
+export const watch = async (req, res) => { 
+    try{        
+        const { id } = req.params;  
+        const video = await videoModel.findById(id);
+        console.log(video);
+        return res.render("watch", {pageTitle : video.title, video : video });
+    } catch (error){
+        console.log(error);
+        return res.render("server-error", {error : Error});
+    }
 };
 export const getEdit = (req, res) => {    
     const { id } = req.params;  

@@ -4,8 +4,6 @@ mixin video(video)
             // #{객체.객체}는 Attribute안에서는 사용할 수 없다.
             // 그럼으로 ``를 사용하거나 "" + 객체.객체로 사용하여야 한다.
             a(href=`/videos/${video.id}`)=video.title
-        ul
-            li #{video.rating}/5
-            li #{video.comments} comments.
-            li Posted #{video.createdAt} 
-            li #{video.views} views.
+        p=video.description
+        small=video.createdAt
+        hr
