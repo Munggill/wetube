@@ -15,3 +15,4 @@ GlobalRouter
 /videos/:id/edit => Edit Video  
 /videos/:id/delete => Delete Video
 /videos/upload => Upload Video
+// 재 Commit을 위한 임시 주석

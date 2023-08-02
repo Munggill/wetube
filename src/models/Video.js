@@ -25,3 +25,5 @@ const videoSchema = new mongoose.Schema({
 
 const videoModel = mongoose.model("Video", videoSchema);
 export default videoModel;
+
+// 재 Commit을 위한 임시 주석

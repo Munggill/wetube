@@ -10,3 +10,5 @@ globalRouter.get("/login", login);
 //globalRouter.get("/search", search);   
 
 export default globalRouter;
+
+// 재 Commit을 위한 임시 주석
