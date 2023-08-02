@@ -1,0 +1,14 @@
+extends base.pug
+include mixins/video
+
+block content  
+
+    each video in videos 
+        // mixins 사용할 경로를 Include후 Block의 +funtion()을 호출하면
+        // 해당 경로의 블럭 코드를 반환한다.
+        // Pug 라이브러리 구조에서만 가능하다.
+        +video(video)
+    else 
+        div 동영상을 찾지 못했습니다.    
+
+        // 재 Commit을 위한 임시 주석

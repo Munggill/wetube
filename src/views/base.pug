@@ -1,0 +1,24 @@
+doctype html 
+html(lang="ko")
+    head 
+        title #{pageTitle} | Wetube
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    body
+        header             
+            // 이 경우 pageTitle은 Value가 됩니다.
+            // #{pageTitle}과 같지만 그렇게 쓰지 않는 경우는 아래와 같다.
+            // 접두어가 없이 오직 하나의 Value값만 같는다   
+            // 예시로 title #{pageTitle} | Wetube는 Value + Wetube로 Text의 값이 되는데
+            // 아래의 경우는 오직 pageTitle의 변수 값을 가지고 있는 Value다.
+            // 결론만 말하면 스크립트를 열면 Text = 는 Value다
+            h1=pageTitle
+            nav 
+                ul 
+                    li 
+                        a(href="/videos/upload") upload Video
+        main
+            block content
+        include partials/footer
+        //include partials/footer.pug 
+
+        // 재 Commit을 위한 임시 주석
