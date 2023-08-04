@@ -1,0 +1,51 @@
+[33mec1ccf6[m[33m ([m[1;36mHEAD -> [m[1;32mhome[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33m30276f1[m HEAD@{1}: commit: 존재하지 않는 url경로 접근 시 나타낼 페이지 설정 및, 디테일 뷰 수정화면 추가
+[33mec1ccf6[m[33m ([m[1;36mHEAD -> [m[1;32mhome[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: pull origin master: Fast-forward
+[33m4084ba6[m[33m ([m[1;31morigin/HOME[m[33m)[m HEAD@{3}: checkout: moving from master to home
+[33m23ac9d8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{4}: checkout: moving from HOME to master
+[33m4084ba6[m[33m ([m[1;31morigin/HOME[m[33m)[m HEAD@{5}: commit: 잘못된 커밋으로 저장소의 소스파일이 모두 날아가서 재 commit
+[33mc87b889[m HEAD@{6}: commit: 깃 저장소에 잘못된 push로 파일이 날아가서 다시 올림
+[33me72cb3f[m HEAD@{7}: commit: Mongoose의 id에 맞게 라우터 정규식 변경 및 디테일(watch.pug)화면 및 전달 파타매터 수정
+[33me2fd96d[m HEAD@{8}: pull origin master: Fast-forward
+[33m77d475b[m HEAD@{9}: commit: videoModel Schema에 Valiedation로직 추가
+[33mc5d258d[m HEAD@{10}: commit: VideoModel에 Default 값 설정
+[33m325f8ff[m HEAD@{11}: pull origin master: Merge made by the 'ort' strategy.
+[33mc4f173c[m HEAD@{12}: commit: mongoose를 사용하여 VideoModel을 Mongo DB에 Insert하고 해당 내용을 Select함, VideoModel에 필수 값(Not Null)속성을 추가하여 실제 테스트 해봄
+[33m32f33c9[m HEAD@{13}: commit: Mongo DB에 넣기위해 VideoModel의 스키마 데이터 생성
+[33m221f795[m HEAD@{14}: commit: 데이터베이스 통신 시 CallBack함수 쓰지 않고 async펑션, await 추가
+[33m66afc82[m HEAD@{15}: pull origin master: Fast-forward
+[33m8666fb2[m HEAD@{16}: commit: mongoose 버전 충돌로 5로 올리면서, 관련 패키지 수정
+[33md497249[m HEAD@{17}: commit: package.json의 실행파일을 해당 파일로 함.. 여기서는 DB, model 만 import하며 서버 리스닝을 한다
+[33m5d1e81e[m HEAD@{18}: commit: models 폴더 추가
+[33mda6dc9a[m HEAD@{19}: commit: Express 관련 함수만 남기고 모두 지움(init.js로 이관)
+[33mb49e051[m HEAD@{20}: commit: 소스 클리닝
+[33m767a200[m HEAD@{21}: commit: 가짜 데이터베이스(배열) 지우고 mongoose로 데이터베이스 통신 테스트
+[33mf34ee3b[m HEAD@{22}: commit: monggose 버전 충돌(find함수 에러) 때문에 5버전으로 올림
+[33m64e31a1[m HEAD@{23}: pull origin master: Fast-forward
+[33md863b8c[m HEAD@{24}: commit: post router를 생성 후 view에서 POST를 submit 하는 구문 추가
+[33m2bce00b[m HEAD@{25}: commit: 깃에 안올라가서 아무 파일이나 다시 커밋
+[33m3f9642f[m HEAD@{26}: commit: video 탬플릿에서 파라매터를 받아 상세페이지 화면을 이동할 수 있도록 수정, 상세페이지 에서는 화면 수정 탬플릿으로 이동할 수 있도록 기능 추가
+[33mb71b419[m HEAD@{27}: commit: HTML 코드 재사용을 위한 mixins 구조 생성
+[33m0e9de29[m HEAD@{28}: pull origin master: Fast-forward
+[33mdafdd5c[m HEAD@{29}: commit: 베이스 탬플릿 구현 후 블록 단위로 별도 View파일을 분리하여 코딩함.. 그 후 Controller에서 전달받은 값을 View에 적용하고 Response에 해당 View 탬플릿을 랜더링하여 클라이언트에게 보여줌
+[33m170bf55[m HEAD@{30}: pull origin master: Fast-forward
+[33mc37ad5f[m HEAD@{31}: commit: Express에 view Engine => pug 사용 구문 추가
+[33med0c920[m HEAD@{32}: commit: 라우터에 정규식 추가
+[33m3f08ea4[m HEAD@{33}: commit: HTML탬플릿인 pug 엔진 추가
+[33mf210697[m HEAD@{34}: checkout: moving from HOME to HOME
+[33mf210697[m HEAD@{35}: commit: HTML탬플릿의 pug엔진 추가
+[33mda984dc[m HEAD@{36}: pull origin master: Fast-forward
+[33md0f2b31[m HEAD@{37}: commit: reset 후 commit하면 어떤일이
+[33m9d4f94c[m HEAD@{38}: reset: moving to HEAD
+[33m9d4f94c[m HEAD@{39}: reset: moving to HEAD
+[33m9d4f94c[m HEAD@{40}: commit: Middle Ware add
+[33md1e483a[m HEAD@{41}: checkout: moving from HOME to HOME
+[33md1e483a[m HEAD@{42}: pull origin master: Fast-forward
+[33me1bb024[m HEAD@{43}: commit: same Merge OneMore
+[33me712989[m HEAD@{44}: commit: add dependencies => express
+[33m374c500[m HEAD@{45}: checkout: moving from HOME to HOME
+[33m374c500[m HEAD@{46}: pull origin master: Fast-forward
+[33m98620fa[m HEAD@{47}: checkout: moving from HOME to HOME
+[33m98620fa[m HEAD@{48}: commit: firstBranch
+[33m23ac9d8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{49}: checkout: moving from master to HOME
+[33m23ac9d8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{50}: clone: from github.com:Munggill/wetube.git
