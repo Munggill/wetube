@@ -48,7 +48,10 @@ export const postEdit = async(req, res) => {
 
     video.title = param.title;
     video.description = param.description;
-    video.hashtags = param.hashtags.split(",").map(word => `#${word}`)
+    video.hashtags = param.hashtags
+        .split(",")
+        .map((word) => (word.startsWith("#") ? word : `#${word}`)); 
+    
     await video.save();
     return res.redirect(`/videos/${id}`);
 };
@@ -58,12 +61,14 @@ export const getUpload = (req, res) => {
 };
 
 export const postUpload = async (req, res) => {
-    const { title, description, hashtags } = req.body;
+    const { title, description, hashtags } = req.body; 
     try {    
         const video = new videoModel({
             title : title,
             description : description , 
-            hashtags : hashtags.split(",").map(word => `#${word}`),
+            hashtags : hashtags
+                .split(",")
+                .map((word) => (word.startsWith("#") ? word : `#${word}`)),
         }); 
         await video.save(); 
         return res.redirect("/");
