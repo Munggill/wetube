@@ -40,19 +40,17 @@ export const postEdit = async(req, res) => {
     const { id } = req.params;
     //Form Action의 Value는 req.body로 받는다.
     const param = req.body;  
-    const video = await videoModel.findById(id);   
+    const video = await videoModel.exists({_id : id});   
     
     if(video === null){
         return res.render("404", {pageTitle:"Video not Found"});
-    }
+    } 
+    await videoModel.findByIdAndUpdate(id, {
+        title : param.title,
+        description : param.description,
+        hashtags : param.hashtags.split(",").map((word) => (word.startsWith("#") ? word : `#${word}`))
+    });
 
-    video.title = param.title;
-    video.description = param.description;
-    video.hashtags = param.hashtags
-        .split(",")
-        .map((word) => (word.startsWith("#") ? word : `#${word}`)); 
-    
-    await video.save();
     return res.redirect(`/videos/${id}`);
 };
 
