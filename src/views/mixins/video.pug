@@ -5,6 +5,9 @@ mixin video(video)
             // 그럼으로 ``를 사용하거나 "" + 객체.객체로 사용하여야 한다.
             a(href=`/videos/${video.id}`)=video.title
         p=video.description
+        ul
+            each hashtag in video.hashtags
+                li=hashtag
         small=video.createdAt
         hr   
 
