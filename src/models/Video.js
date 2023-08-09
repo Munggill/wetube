@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
+export const formatHashTags = (hashtags) =>
+    hashtags.split(",").map((word) => (word.startsWith("#") ? word : `#${word}`));
+
 const videoSchema = new mongoose.Schema({
     title:{
         type: String, 
@@ -22,12 +25,10 @@ const videoSchema = new mongoose.Schema({
         rating:{type:Number, default: 0, required : true},
     },
 });
- 
-videoSchema.pre("save", function(){
-    this.hashtags = this.hashtags[0]
-        .split(",")
-        .map((word) => (word.startsWith("#") ? word : `#${word}`))
-});
+
+videoSchema.static("formatHashTags",function(hashtags){
+    return hashtags.split(",").map((word) => (word.startsWith("#") ? word : `#${word}`));
+})
 
 const videoModel = mongoose.model("Video", videoSchema);
 export default videoModel;
