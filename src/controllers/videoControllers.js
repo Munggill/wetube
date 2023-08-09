@@ -1,4 +1,4 @@
-import videoModel from "../models/Video";
+import videoModel, { formatHashTags } from "../models/Video";
 
 // Video.find({},(error, videosDocument) => {});
 // =======================================================
@@ -48,7 +48,7 @@ export const postEdit = async(req, res) => {
     await videoModel.findByIdAndUpdate(id, {
         title : param.title,
         description : param.description,
-        hashtags : param.hashtags,
+        hashtags : formatHashTags(param.hashtags),
     });
 
     return res.redirect(`/videos/${id}`);
@@ -64,7 +64,7 @@ export const postUpload = async (req, res) => {
         const video = new videoModel({
             title : title,
             description : description , 
-            hashtags : hashtags,
+            hashtags : formatHashTags(hashtags),
         }); 
         await video.save(); 
         return res.redirect("/");
