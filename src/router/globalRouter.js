@@ -1,13 +1,14 @@
 import express from "express";
 import { join, login } from "../controllers/userControllers";
-import { home } from "../controllers/videoControllers";
+import { home, search } from "../controllers/videoControllers";
 
 const globalRouter = express.Router();   
 
+globalRouter.get("/search", search); 
 globalRouter.get("/", home);
 globalRouter.get("/join", join);
 globalRouter.get("/login", login);
-//globalRouter.get("/search", search);   
+console.log("VideoRouter에 serch있습니다."); 
 
 export default globalRouter;
 
