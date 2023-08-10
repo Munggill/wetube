@@ -7,12 +7,12 @@ import videoModel from "../models/Video";
 // render는 view탬플릿과 탬플릿으로 보낼 변수의 인자를 같는다.
 // ===================================================== == 
 export const home =  async(req, res) => {     
-    try{
-        const videos = await videoModel.find({}) 
+    //try{
+        const videos = await videoModel.find({}).sort({createdAt:"asc"})//.sort({ createdAt: -1 })
         return res.render("home", {pageTitle : "Home", videos:videos }); 
-    } catch{ 
-        return res.render("server-error", {error : Error});
-    }    
+    //} catch{ 
+        //return res.render("server-error", {error : Error});
+    //}    
 };
 export const watch = async (req, res) => { 
     try{        
@@ -77,4 +77,13 @@ export const postUpload = async (req, res) => {
     } 
 };
 
-// 재 Commit을 위한 임시 주석
+export const deleteVideo = async(req, res) =>{
+    const { id } = req.params; 
+    await videoModel.findByIdAndDelete(id);
+    return res.redirect("/");
+};
+
+export const search = (req, res) => {
+    console.log("Search에 진입했습니다.");
+    return res.render("search");
+}
