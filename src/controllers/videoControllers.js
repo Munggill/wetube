@@ -77,4 +77,9 @@ export const postUpload = async (req, res) => {
     } 
 };
 
-// 재 Commit을 위한 임시 주석
+export const deleteVideo = async(req, res) =>{
+    const { id } = req.params;
+    console.log(`test 합니다. ${id}`);
+    await videoModel.findByIdAndDelete(id);
+    return res.redirect("/");
+}
