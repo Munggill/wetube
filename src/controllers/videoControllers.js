@@ -83,7 +83,7 @@ export const deleteVideo = async(req, res) =>{
     return res.redirect("/");
 };
 
-export const search = (req, res) => {
-    console.log("Search에 진입했습니다.");
-    return res.render("search");
+export const search = (req, res) => { 
+    const {keyword} = req.query    
+    return res.render("search", {pageTitle: "Search"});
 }
