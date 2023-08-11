@@ -1,4 +1,4 @@
-import videoModel from "../models/Video";
+import videoModel from "../models/Video"; 
 
 // Video.find({},(error, videosDocument) => {});
 // =======================================================
@@ -83,7 +83,16 @@ export const deleteVideo = async(req, res) =>{
     return res.redirect("/");
 };
 
-export const search = (req, res) => { 
+export const search = async (req, res) => { 
     const {keyword} = req.query    
-    return res.render("search", {pageTitle: "Search"});
+    let videos = [];
+    if(keyword) {
+        videos = await videoModel.find({
+            title:{
+                $regex: new RegExp(keyword, "i")
+            }
+        })        
+    }
+    
+    return res.render("search", {pageTitle: "Search", videos:videos});
 }
