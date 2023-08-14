@@ -1,6 +1,6 @@
 import express from "express";
 import logger from "morgan";
-import globalRouter from "./router/globalRouter";
+import rootRouter from "./router/rootRouter";
 import userRouter from "./router/userRouter";
 import videoRouter from "./router/videoRouter";
 
@@ -35,7 +35,7 @@ app.set("views", process.cwd() + "/src/views");
 // req.body를 받을때 사용..
 app.use(express.urlencoded({exteded:true}));
 
-app.use("/", globalRouter);    
+app.use("/", rootRouter);    
 app.use("/videos", videoRouter); 
 app.use("/users", userRouter); 
 
