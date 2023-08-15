@@ -2,9 +2,9 @@ extends base.pug
 
 block content 
     form(method="POST")        
-        input(name="name", type="text", required)
-        input(name="eamil", type="email", required)
-        input(name="username", type="text", required)
-        input(name="password", type="password", required)
-        input(name="location ", type="text", required)
+        input(name="name", type="text", required, placeholder="name")
+        input(name="email", type="email", required, placeholder="email")
+        input(name="username", type="text", required, placeholder="userName")
+        input(name="password", type="password", required, placeholder="PassWord")
+        input(name="location", type="text", required, placeholder="location")
         input(type="submit",value="Join")
