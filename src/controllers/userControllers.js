@@ -3,15 +3,22 @@ import UserModel from "../models/User";
 export const getJoin = (req, res) => res.render("join", {pageTitle:"Join"});
 export const postJoin = async (req, res) => {
     const {name, email, username, password, location} = req.body;
-    const usernameExists = await UserModel.exists({username});    
-    console.log(usernameExists);
-    if(usernameExists){
-        console.log("이미사용즁");
+    const pageTitle = "Join";
+    const usernameExists = await UserModel.exists({username});     
+    if(usernameExists){ 
         return res.render("join", {
-            pageTitle : "Join",
-            errorMessage:"이미 사용중인 유저명입니다."
-        })
-    }
+            pageTitle : pageTitle,
+            errorMessage:"이미 사용중인 유저명입니다.",
+        });
+    };    
+    const emailExists = await UserModel.exists({email});
+    if (emailExists){
+        return res.render("join", {
+            pageTitle : pageTitle,
+            errorMessage:"이미 사용중인 이메일 입니다.",
+        });
+    };
+    
     await UserModel.create({        
         name,         
         email,         
