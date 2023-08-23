@@ -2,25 +2,25 @@ import UserModel from "../models/User";
 
 export const getJoin = (req, res) => res.render("join", {pageTitle:"Join"});
 export const postJoin = async (req, res) => {
-    const {name, email, username, password, location} = req.body;
+    const {name, email, username, password, password2, location} = req.body;
     const pageTitle = "Join";
-    const usernameExists = await UserModel.exists({username});     
+    if(password !== password2){
+        return res.render("join", {
+            pageTitle : pageTitle,
+            errorMessage:"패스워드가 일치하지 않습니다.",
+        });
+    }
+
+    const usernameExists = await UserModel.exists({$or:[{username:username}, {email:email}] });     
     if(usernameExists){ 
         return res.render("join", {
             pageTitle : pageTitle,
-            errorMessage:"이미 사용중인 유저명입니다.",
+            errorMessage:"이미 사용중인 유저명/이메일 입니다.",
         });
     };    
-    const emailExists = await UserModel.exists({email});
-    if (emailExists){
-        return res.render("join", {
-            pageTitle : pageTitle,
-            errorMessage:"이미 사용중인 이메일 입니다.",
-        });
-    };
     
     await UserModel.create({        
-        name,         
+        name : name,         
         email,         
         username,        
         password,
