@@ -52,7 +52,7 @@ For building and running the application you need:
 
 ```
 $ git clone https://github.com/Munggill/wetube.git
-$ cd Voluntain-2nd
+$ cd wetube
 ```
 
 #### Backend/Frontend
@@ -60,6 +60,20 @@ $ cd Voluntain-2nd
 $ npm install
 $ npm run dev
 ```
+
+## Stacks 🐈
+
+### Environment 계속 작성중입니다
+![준비중입니다.](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white)
+![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)             
+
+### Config
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)        
+
+### Development
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
+
 
 
 GlobalRouter
