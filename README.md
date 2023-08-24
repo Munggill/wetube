@@ -1,9 +1,12 @@
 # WeTube 
 
+<div align="center">
 <img src="http://resume.anmg.store/clickonce/file/wetube/wetubeLogo.png">
+</div>
+<div align="center">
 <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/Munggill/hit-counter"/>
-
-<br>
+</div>
+ 
 
 ## WeTube Web Site
 JavaScript로 BackEnd와 FrontEnd를 경험하고 싶어서 진행한 ToyProject 
