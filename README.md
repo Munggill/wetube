@@ -74,21 +74,14 @@ $ npm run dev
 ### Development
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
 
-
-
-GlobalRouter
-/ => HOME
-/join => Join
-/login => Login
-/search => Search
-
-/users/:id => See User
-/users/logout => Log Out
-/users/edit => Edit MY Profile
-/users/delete => Delete MY Profile
-
-/videos/:id => See Video
-/videos/:id/edit => Edit Video  
-/videos/:id/delete => Delete Video
-/videos/upload => Upload Video
-// 재 Commit을 위한 임시 주석
+---
+## 화면 구성 📺
+| XXX 페이지  |  XXX 페이지   |
+| :-------------------------------------------: | :------------: |
+|  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/> 
+|  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>|  
+|  XXX 페이지   | XXX 영상 페이지   |  
+| <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>  
+| <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>     
+|
+---
