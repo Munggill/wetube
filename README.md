@@ -55,6 +55,11 @@ $ git clone https://github.com/Munggill/wetube.git
 $ cd Voluntain-2nd
 ```
 
+#### Backend/Frontend
+```
+$ npm install
+$ npm run dev
+```
 
 
 GlobalRouter
