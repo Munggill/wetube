@@ -51,7 +51,8 @@ For building and running the application you need:
 ## installation
 
 ```
-http://resume.anmg.store:3999
+$ git clone https://github.com/Munggill/wetube.git
+$ cd Voluntain-2nd
 ```
 
 
