@@ -76,12 +76,25 @@ $ npm run dev
 
 ---
 ## 화면 구성 📺
-| XXX 페이지  |  XXX 페이지   |
+| 메인 페이지  |  소개 페이지   |
 | :-------------------------------------------: | :------------: |
-|  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/> 
-|  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>|  
-|  XXX 페이지   | XXX 영상 페이지   |  
-| <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>  
-| <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>     
-|
+|  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/> |  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>|  
+| 강좌 소개 페이지   |  강의 영상 페이지   |  
+| <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>   |  <img width="329" src="http://resume.anmg.store/clickonce/file/white.png"/>     |
+
+---
+
+---
+## 주요 기능 📦
+
+### ⭐️ 강좌 선택 및 강의 영상 시청 기능
+- Scratch, Python 2개 강좌 및 각 강좌마다 10개 가량의 강의 영상 제공
+- 추후 지속적으로 강좌 추가 및 업로드 예정
+
+### ⭐️ 강의 관련 및 단체에 대한 자유로운 댓글 작성 가능
+- Disqus를 이용하여 강의 관련 질문이나 단체에 대한 질문 작성 가능
+
+### ⭐️ 이어 학습하기 기능
+- Cookie 기능을 이용하여 이전에 학습했던 내용 이후부터 바로 학습 가능
+
 ---
