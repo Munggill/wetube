@@ -40,8 +40,11 @@ Wetube는 비디오를 업로드, 시청하며 유저들끼리 소통하는 웹 
 <br>
 
 ## 시작 가이드
-* Node.js v18.16
-* npm v9.5.1
+### Requirements
+For building and running the application you need:
+
+- [Node.js 18.16](https://nodejs.org/ca/blog/release/v18.16.0/)
+- [Npm 9.5.1](https://www.npmjs.com/package/npm/v/9.5.1)
 
 <br>
 
