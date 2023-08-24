@@ -23,8 +23,8 @@ http://resume.anmg.store:3999
 |      안명길       |                   |                |                                                                                                               
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | 
 |   <img width="160px" src="http://resume.anmg.store/clickonce/file/anmg.jpg" />    |                      <img width="160px" src="http://resume.anmg.store/clickonce/file/white.png" />    |                   <img width="160px" src="http://resume.anmg.store/clickonce/file/white.png"/>   |
-|   [@parkjiye](https://github.com/parkjiye)   |    [@ChaeyeonSeo](https://github.com/ChaeyeonSeo)  | [@hyunjeong408](https://github.com/hyunjeong408)  |
-| 고려사이버대학교 소프트웨어공학과 | 성균관대학교 소프트웨어학과 4학년 | 성균관대학교 소프트웨어학과 4학년 |
+|   [@Anmyeonggil](https://github.com/Munggill)   |      |   |
+| 고려사이버대학교 소프트웨어공학과 |  |  |
 
 ## 프로젝트 소개
 
