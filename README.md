@@ -66,8 +66,10 @@ $ npm run dev
 ## 사용기술 🛠️ 
 
 ### 언어
+<div> 
  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white"/> 
  <img src="https://img.shields.io/badge/javaScript-F7DF1E?style=flat&logo=javaScript&logoColor=white"/> 
+</div>
 
 ### 프레임워크
  <img src="https://img.shields.io/badge/Express-000000?style=flat&logo=Express&logoColor=white"/>  
@@ -79,23 +81,21 @@ $ npm run dev
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)  
 
 ### 라이브러리/엔진
+<div>
  <img src="https://img.shields.io/badge/mongan-F04D35?style=flat&logo=mongoose&logoColor=white"/>  
  <img src="https://img.shields.io/badge/bcrypt-F04D35?style=flat&logo=mongoose&logoColor=white"/>  
  <img src="https://img.shields.io/badge/mongoose-F04D35?style=flat&logo=mongoose&logoColor=white"/>  
  <img src="https://img.shields.io/badge/Pug-A86454?style=flat&logo=pug&logoColor=white"/>  
- 
-![morgan](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white)
-![bcrypt](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)    
-![mongoose](https://img.shields.io/badge/Mongoose-F04D35?style=for-the-badge&logo=mongoose&logoColor=white)    
-![pug](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)                  
+</div> 
+              
 
 ## Tool 🛠️ 
 
 ### 개발툴
-![VS Code](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)        
+ <img src="https://img.shields.io/badge/VsCode-007ACC?style=flat&logo=vs code&logoColor=white"/>        
 
 ### 버전관리
-![GitHub](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)        
+ <img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white"/>              
  
 
 ---
