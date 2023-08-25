@@ -92,7 +92,7 @@ $ npm run dev
 ## Tool 🛠️ 
 
 ### 개발툴
- <img src="https://img.shields.io/badge/VsCode-007ACC?style=flat&logo=vs code&logoColor=white"/>        
+ <img src="https://img.shields.io/badge/VsCode-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/>        
 
 ### 버전관리
  <img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white"/>              
