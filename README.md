@@ -66,11 +66,11 @@ $ npm run dev
 ## 사용기술 🛠️ 
 
 ### 언어
-![javaScript](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Javascript%20Studio%20Code&logoColor=white)
-![Node.js](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
+ <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=TypeScript&logoColor=white"/> 
+ <img src="https://img.shields.io/badge/javaScript-F7DF1E?style=flat&logo=TypeScript&logoColor=white"/> 
 
 ### 프레임워크
-![Express](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
+ <img src="https://img.shields.io/badge/Express-000000?style=flat&logo=TypeScript&logoColor=white"/>  
 
 ### 데이터베이스
 ![Mongo](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
