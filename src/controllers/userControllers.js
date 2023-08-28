@@ -1,4 +1,5 @@
 import UserModel from "../models/User";
+import bcrypt from "bcrypt";
 
 export const getJoin = (req, res) => res.render("join", {pageTitle:"Join"});
 export const postJoin = async (req, res) => {
@@ -40,15 +41,25 @@ export const getLogin = (req, res) => res.render("Login", {
 });
 
 export const postLogin = async (req, res) => {
-    const { username, password } = req.body;
-    const exists = await UserModel.exists({username:username});
-    if(!exists){
+    const { username, password } = req.body;    
+    const pageTitle = "Login";
+    const user = await UserModel.findOne({username : username});
+    if(!user){
         return res.status(400).render("login", {
-            pageTitle:"Login", 
+            pageTitle: pageTitle,
             errorMessage:`${username}의 유저명이 존재하지 않습니다.`
         });
-    }
-    res.end();
+    };
+
+    const ok = await bcrypt.compare(password, user.password);
+    if(!ok){
+        return res.status(400).render("login", {
+            pageTitle : pageTitle, 
+            errorMessage:`패스워드가 틀렸습니다.`
+        });
+    };
+    console.log(`LOG USER IN! COMING SOON! ${user.username}`);
+    return res.redirect("/");
 }
 
 export const edit = (req, res) => res.send("Edit User");
