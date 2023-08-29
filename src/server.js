@@ -3,6 +3,7 @@ import logger from "morgan";
 import rootRouter from "./router/rootRouter";
 import userRouter from "./router/userRouter";
 import videoRouter from "./router/videoRouter";
+import session from "express-session";
 
 const app = express();
 app.use(logger("dev"));   
@@ -34,6 +35,12 @@ app.set("views", process.cwd() + "/src/views");
 // Form의 Values를 이해할 수 있도록 하고 우리가 쓸 수 있는 자바스크립트 형식(객체)로 전환해준다
 // req.body를 받을때 사용..
 app.use(express.urlencoded({exteded:true}));
+
+app.use(session({
+    secret:"Hello",
+    resave : true,
+    saveUninitialized : true,
+}));
 
 app.use("/", rootRouter);    
 app.use("/videos", videoRouter); 
