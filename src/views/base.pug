@@ -18,10 +18,19 @@ html(lang="ko")
                         a(href="/videos/upload") upload Video
                     li
                         a(href="/") Home
+                    //locals는 Express Session Middleware Engine에서 모든 탬플릿에 넘겨주는 글로벌 오브젝트 값
+                    if locals.loggedIn 
+                        li 
+                            a(href="/logout") Log Out
+                        li 
+                            a(href="/my-profile") #{loggedInUser.name}의 profile
+                    else
+                        li 
+                            a(href="/join") Join
+                        li 
+                            a(href="/login") Login
                     li
-                        a(href="/search") search
-                    li 
-                        a(href="/join") Join
+                        a(href="/search") search 
         main
             block content
         include partials/footer
