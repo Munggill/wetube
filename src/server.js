@@ -5,6 +5,7 @@ import userRouter from "./router/userRouter";
 import videoRouter from "./router/videoRouter";
 import session from "express-session";
 import { localsMiddleware } from "./middlewares";
+import MongoStore from "connect-mongo";
 
 const app = express();
 app.use(logger("dev"));   
@@ -41,6 +42,10 @@ app.use(session({
     secret:"Hello",
     resave : true,
     saveUninitialized : true,
+    // ===========================================================================================
+    // Session Data를 저장하기 위해서 사용.. connect-Mongo 모듈을 사용, DB의 sessions가 자동 생성, 할당된다.
+    // ===========================================================================================
+    store: MongoStore.create({mongoUrl : "mongodb://127.0.0.1:27017/wetube"}), 
 }));
 
 app.use(localsMiddleware);
