@@ -1,4 +1,3 @@
 #nodemodul#
 /node_modules    
-
-// 재 Commit을 위한 임시 주석
+.env

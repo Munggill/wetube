@@ -38,20 +38,22 @@ app.set("views", process.cwd() + "/src/views");
 // req.body를 받을때 사용..
 app.use(express.urlencoded({exteded:true}));
 
+// process.env는 Init.js에서 Import하여 글로벌 변수로 계속 사용됩니다.
+// dotenv 페키지를 사용합니다.
 app.use(session({
-    secret:"Hello",
+    secret:process.env.COOKIE_SECRET,
     // ===========================================================================================
     // 모든 쿠키를 저장하지 않고, Session의 수정/할당 이 있을 시만 쿠키를 저장합니다.
     // ===========================================================================================
     resave : false,
     saveUninitialized : false,
     cookie : {
-        maxAge : 20000, //쿠키 보관시간(ms)
+        maxAge : 200000, //쿠키 보관시간(ms)
     },
     // ===========================================================================================
     // Session Data를 저장하기 위해서 사용.. connect-Mongo 모듈을 사용, DB의 sessions가 자동 생성, 할당된다.
     // ===========================================================================================
-    store: MongoStore.create({mongoUrl : "mongodb://127.0.0.1:27017/wetube"}), 
+    store: MongoStore.create({mongoUrl : process.env.DB_URL}), 
 }));
 
 app.use(localsMiddleware);
