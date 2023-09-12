@@ -63,16 +63,29 @@ export const postLogin = async (req, res) => {
     return res.redirect("/");
 }
 
-export const startGithubLogin = (req, res) => {    
+export const startGithubLogin = (req, res) => {   
+    console.log("startGithubLogin 진입") 
     const baseUrl = `https://github.com/login/oauth/authorize`;
     const config = {
-        clientId : "61c61c540b7a9c650293",
+        client_id : process.env.GH_CLIENT,
         allow_singup : false,
-        scope : "read:user user:email",
+        scope : "read:user user:email",        
     };
-    const params = new URLSearchParams(config).toString();
-    const finalUrl = `${baseUrl}?${params}`;
+    const params = new URLSearchParams(config).toString(); 
+    const finalUrl = `${baseUrl}?${params}`; 
+    console.log(finalUrl);
     return res.redirect(finalUrl);
+};
+
+export const finishGithubLogin = (req, res) => {
+    const baseUrl = "https://github.com/login/oauth/access_token";
+    const config = {
+        client_id:process.env.GH_CLIENT,
+        client_secret: process.env.CH_SECRET,
+        code : req.query.code
+    };
+    const param = new URLSearchParams(config).toString();
+    const finalUrl = `${baseUrl}?${params}`; 
 };
 
 export const edit = (req, res) => res.send("Edit User");
